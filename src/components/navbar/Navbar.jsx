@@ -7,7 +7,7 @@ import NavbarStyles, {
   Nav,
 } from "./NavbarStyles";
 import { FaBars } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <Nav> 
     
-       <Logo href="#home" onClick={() => navigate("/home")}>
+       <Logo onClick={()=> navigate("/home")}>
           {"<Clarusway>"} 
           <span>recipe</span>
         </Logo>
@@ -23,12 +23,8 @@ const Navbar = () => {
       <Menu>
        
         <MenuLink
-          onClick={() => navigate("/about")}
-          style={({ isActive }) => ({
-            backgroundColor: isActive && "brown",
-            borderRadius: isActive && "10px",
-            color: isActive && "white",
-          })}
+        as={Link}
+        to="/about"
         >
           About
         </MenuLink>
@@ -42,7 +38,7 @@ const Navbar = () => {
           Github
         </a>
 
-        <MenuLink onClick={() => navigate('/')}>Logout</MenuLink>
+        <MenuLink  as={Link} to="/" onClick={() => navigate('/')}>Logout</MenuLink>
 
         <Hamburger> <FaBars/> </Hamburger>
       </Menu>

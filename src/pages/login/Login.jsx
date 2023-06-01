@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
+ 
+
+  
 
 const navigate= useNavigate()
 
@@ -16,7 +19,7 @@ const navigate= useNavigate()
   {"<Clarusway/>"}Recipe
 </Header>
 
-<StyledForm onSubmit={()=>navigate('/home')}>
+<StyledForm onSubmit={() => navigate('/home')}>
 
 <StyledInput type="text"
   placeholder="username"
