@@ -6,7 +6,6 @@ export const DetailContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  background: #00adb5;
   min-height: calc(100vh - 75px);
   /* height: fit-content; */
   padding: 5px;

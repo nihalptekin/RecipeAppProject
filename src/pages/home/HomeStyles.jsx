@@ -39,7 +39,7 @@ export const RecipeImage = styled.img`
   /* kartların içindeki resimler RECİPECARD */
   height: 150px;
   border-radius: 10px;
-  border:2px solid red;
+
 `;
 
 export const Button = styled.button`
@@ -70,5 +70,4 @@ export const HomeImg = styled.img`
   /* ana sayfadaki esas resim */
   width: 80%;
   max-width: 750px;
-  background-color:pink;
 `;

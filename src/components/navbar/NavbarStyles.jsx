@@ -17,6 +17,8 @@ export const Nav = styled.div`
   /* background: #e1f1dd; */
 `;
 
+
+
 export const MenuLink = styled(Link)`
   /* navbardaki 3 kelime ... tek tek about vs yazanların özellikleri YEŞİL*/
 

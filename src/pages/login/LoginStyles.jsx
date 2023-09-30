@@ -17,7 +17,7 @@ export const FormContainer = styled.div`
   width: 600px;
   min-width: 600px;
   height: 600px;
-  background-color: rgba(0, 173, 181, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   border: 2px solid #e1f1dd;
   padding: 5px;
@@ -36,24 +36,25 @@ export const Header = styled.h1`
 
 export const StyledInput = styled.input`
   /* username giriş inputları */
-  height: 50px;
+  height: 40px;
   font-size: 2rem;
-  width: 250px;
+  width: 220px;
   border-radius: 5px;
   font-family: "Girassol", sans-serif;
   /* inuta girilen yazıyı büyük harf yapar */
-  background-color: rgba(0, 0, 0, 0.6);
   border: none;
   color: white;
   margin: 1rem;
   text-indent: 20px;
+ 
 `;
 
 export const StyledForm = styled.form`
   /* 3 kutunun olduğu form */
-  background: pink;
+  background: #FFB000;
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
 `;
 
 export const StyledButton = styled.button`
@@ -74,3 +75,20 @@ export const StyledImg = styled.img`
   width: 150px;
   margin: 1rem;
 `;
+
+export const Googlebutton = styled.button`
+border: none;
+background-color: #FFB000;
+border-radius: 20px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 15px;
+&:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+
+`
+

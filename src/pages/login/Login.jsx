@@ -18,6 +18,7 @@ import {
   StyledForm,
   StyledImg,
   StyledInput,
+  Googlebutton,
 } from "./LoginStyles";
 import mealSvg from "../../assets/meal.svg";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +37,7 @@ const Login = () => {
       .then((result) => {
         // console.log(result);
         toastSuccessNotify("Logged in successfuly");
-        navigate("/");
+        navigate("/home");
       })
       .catch((error) => {
         console.log(error);
@@ -72,15 +73,17 @@ const Login = () => {
             onChange={(e) => setPass(e.target.value)}
           />
           <StyledButton type="submit">Login</StyledButton>
-        </StyledForm>
-        <button
-            className="btn-danger flex justify-between items-center"
+
+          <Googlebutton
+     
             type="button"
             onClick={() => signUpProvider()}
           >
             Continue with Google
-            <GoogleIcon color="currentColor" />
-          </button>
+            <GoogleIcon style={{marginLeft: "5px"}} />
+          </Googlebutton>
+        </StyledForm>
+
 
       </FormContainer>
     </LoginContainer>

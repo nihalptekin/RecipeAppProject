@@ -3,7 +3,8 @@ import designSvg from "../../assets/design.svg";
 
 const Footer = () => {
   return (
-    <div className="footer-div">
+    <div className="div">
+       <div className="footer-div">
  
       <span>Copyright {new Date().getFullYear()}</span>
 
@@ -22,11 +23,13 @@ const Footer = () => {
         // Noreferrer, yönlendirme bilgilerinin hedef web sitesine aktarılmasını önlemek için kullanılır ve bu aynı zamanda Google analitikteki yönlendirme trafiğini de gizler.
         style={{ textDecoration: "none" }}
       >
-        <code className="brand">{"By Nihal Tekin"}</code>
+        <code className="brand">{"<By Nihal Tekin/>"}</code>
         {/* <></> işaretleriyle kod formatında yazabilmek  için code */}
       </a>
 
     </div>
+    </div>
+   
   );
 };
 

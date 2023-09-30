@@ -1,10 +1,12 @@
 import React from "react";
+import food from "../../assets/food.png"
 import {
   Hamburger,
   Logo,
   Menu,
   MenuLink,
   Nav,
+  StyledImg,
 } from "./NavbarStyles";
 import { FaBars } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
@@ -16,6 +18,7 @@ const Navbar = () => {
     <Nav> 
     
        <Logo onClick={()=> navigate("/home")}>
+       
           <span>Recipe App</span>
         </Logo>
 
