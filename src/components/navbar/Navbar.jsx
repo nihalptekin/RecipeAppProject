@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarStyles, {
+import {
   Hamburger,
   Logo,
   Menu,
@@ -16,8 +16,7 @@ const Navbar = () => {
     <Nav> 
     
        <Logo onClick={()=> navigate("/home")}>
-          {"<Clarusway>"} 
-          <span>recipe</span>
+          <span>Recipe App</span>
         </Logo>
 
       <Menu>

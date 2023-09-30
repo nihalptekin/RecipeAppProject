@@ -1,38 +1,17 @@
-import React, { useEffect } from 'react';
-import { HeaderContainer } from '../header/HeaderStyles';
-import { Button, FormContainer, Select } from '../header/HeaderStyles';
-import { FoodInput, MainHeader } from './HeaderStyles';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { HeaderContainer } from "../header/HeaderStyles";
+import { Button, FormContainer, Select } from "../header/HeaderStyles";
+import { FoodInput, MainHeader } from "./HeaderStyles";
+import { useNavigate } from "react-router-dom";
 
-const Header = ({
-  mealType,
-  setMealType,
-  query,
-  setQuery,
-  yemekler,
-  setYemekler,
-}) => {
-  const navigate = useNavigate();
+const Header = ({ setMealType, setQuery, fetchData, query }) => {
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/home');
+   fetchData();
   };
 
-  useEffect(() => {
-    console.log('Query:', query);
-    setQuery('');
-  }, [query, setQuery]);
-
-  const handleMealTypeChange = (e) => {
-    const selectedMealType = e.target.value;
-    setMealType(selectedMealType);
-
-    const filteredYemekler = yemekler.filter(
-      (yemek) => yemek.mealType === selectedMealType
-    );
-    setYemekler(filteredYemekler);
-  };
 
   return (
     <HeaderContainer>
@@ -46,7 +25,7 @@ const Header = ({
           placeholder="Search"
         />
         <Button type="submit">Search</Button>
-        <Select value={mealType} onChange={handleMealTypeChange}>
+        <Select  onChange={(e)=> setMealType(e.target.value)}>
           <option value="breakfast">Breakfast</option>
           <option value="lunch">Lunch</option>
           <option value="dinner">Dinner</option>
